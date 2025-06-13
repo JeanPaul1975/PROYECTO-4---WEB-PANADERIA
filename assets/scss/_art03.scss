@@ -1,0 +1,54 @@
+@use 'config' as c;
+
+.art_03{
+    width: 100%;
+    padding: c.$paddingMin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 3rem;
+    &:hover :nth-child(3) img{
+        transform: scale(1.2);
+        transition: 2s;
+    }
+    @media only screen and (min-width:c.$tablet){
+        width: 80%;
+        padding: 3rem 0;
+    }
+    h3{
+        @media only screen and (min-width:c.$desktop){
+            width: 80%;
+        }
+    }
+    >:nth-child(2){
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        row-gap: 1rem;
+        @media only screen and (min-width:c.$desktop){
+            width: 80%;
+        }
+    }
+    >:nth-child(3){
+        width: 100%;
+        overflow: hidden;
+        @media only screen and (min-width:c.$desktop){
+            width: 80%;
+        }
+        img{
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: 1s;
+            @media only screen and (min-width:c.$tablet){
+                max-height: 500px;
+            }
+            @media only screen and (min-width:c.$desktop){
+                max-height: 400px;
+            }
+        }
+    }
+}

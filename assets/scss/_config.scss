@@ -1,0 +1,154 @@
+// Declaración de fuentes
+
+@font-face {
+   font-family: 'montserrat';
+   src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+   font-family: 'opensans';
+   src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+// Variables
+
+
+$fuente01: 'Open Sans';
+$fuente02: 'Montserrat';
+
+$tablet: 800px;
+$desktop: 1200px;
+
+$color00: black ;  
+$color01: rgb(114, 114, 124);
+$color02: #008000;
+$color03: #ffffff; 
+$color04: red;
+$color05: rgb(184, 149, 149);
+
+$paddingMin: 1.5rem;
+$paddingMax: 3rem;
+
+
+// Reseteo css
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+ }
+
+// Estilos de encabezado
+
+ h1{
+   font-size: clamp(2rem, 6vw, 10rem);
+   color: $color00;
+   letter-spacing: 10px;
+   font-family: $fuente01;
+   text-align: center;
+   width: 90%;
+   filter: drop-shadow(5px 5px 10px #ffffff);
+   @media only screen and (min-width:$desktop){
+      width: 85%;
+   }
+ }
+ h2{
+   font-size: 3rem;
+   color: $color00;
+   letter-spacing: 4px;
+   font-family: $fuente01;
+ }
+ .h2especial{
+   //todos los estilos de la caja que contiene el span y el h2
+   width: 100%;
+   padding: 0 $paddingMin;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: flex-start;
+   column-gap: 1rem;
+   @media only screen and (min-width:$desktop){
+      width: 80%;
+      padding: initial;
+   }
+   span{
+      width: 40px;
+      height: 2px;
+      background-color: $color04;    
+   }
+   h2{
+      color: $color04;
+      font-size: 1.3rem;
+   }
+ }
+ h3{
+   font-size: 2rem;
+   color: $color00;
+   letter-spacing: 3px;
+   font-family: $fuente01;
+ }
+ h4{
+   font-size: 1.6rem;
+   color: $color00;
+   letter-spacing: 3px;
+   font-family: $fuente01;
+ }
+ p{
+   font-size: 1rem;
+   color: $color00;
+   letter-spacing: 1px;
+   font-family: $fuente02;
+ }
+
+ a{
+   font-family: $fuente02;
+   text-decoration: none;
+   
+ }
+
+ .boton{
+   padding: 0.5rem 2rem;
+   color: $color00; 
+   background-color: $color03;
+   border-radius: 5px;
+   letter-spacing: 2px;
+   border: 1px solid $color00;
+   &:hover {
+      background-color: $color05;
+      color: $color03;
+      border: 1px solid $color04;
+   }
+   &:active {
+      transform: scale(2);
+   }
+
+ }
+
+ // Estilos básicos de etiquetas principales
+ body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+ }
+ header, nav, main, footer, section{
+    width: 100%;
+    max-width: 2560px;
+ }
+
+ section {
+   padding: 2rem 0rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   row-gap: 2rem;
+   
+   @media only screen and (min-width:$tablet){
+      padding: 4rem 0rem;
+      row-gap: 3rem;
+   }
+   @media only screen and (min-width:$desktop){
+      padding: 4rem 0rem;
+      row-gap: 4rem;
+   }
+ }

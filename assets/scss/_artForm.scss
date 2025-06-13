@@ -1,0 +1,56 @@
+@use 'config' as c;
+
+.artForm {
+    width: 100%;
+    padding: c.$paddingMin;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 2rem;
+    @media only screen and (min-width:c.$tablet){
+        width: 40%;
+        min-width: 600px;  
+    }
+    h3{
+        width: 100%;
+        text-align: center;
+    }
+    form{
+        background-color: aqua;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        row-gap: 0.8rem;
+        border-radius: 25px;
+        padding: 1.5rem;
+        @media only screen and (min-width:c.$tablet){
+            padding: 2rem 3rem;
+        }
+        label{
+            font-size: clamp(0.9rem,3vw,1.3rem);
+            font-family: c.$fuente02;
+        }
+        input{
+            width: 100%;
+            padding: 0.5rem 2rem;
+            font-family: c.$fuente02;
+            font-size: clamp(1rem,3vw,1.4rem);
+        }
+        input, textarea{
+            width: 100%;
+            padding: 0.5rem 1rem;
+            font-family: c.$fuente02;
+            font-size: clamp(1rem,3vw,1.4rem);
+        }
+        textarea{
+            width: 100%;
+            min-width: 100%;
+            height: 100px;
+            min-width: 100px;
+            max-height: 500px;
+        }
+    }
+}

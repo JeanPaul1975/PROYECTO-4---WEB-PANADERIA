@@ -1,0 +1,36 @@
+@use 'config' as c;
+
+.moduloBoton02{
+    background-color: black;
+    
+    padding: 0.5rem 0.6rem 0.5rem 1.4rem;
+    border-radius: 46px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 0.5rem;
+    >span{
+        letter-spacing: 2px;
+        color: white; 
+    }
+    >img{
+        width: 35px;
+        border-radius: 50%;
+        background-color: c.$color03;
+        padding: 7px;
+        transform: rotate(-45deg);
+    }
+    &:hover span{
+        color: c.$color03;
+    }
+    &:hover img{
+        color: c.$color02;
+        filter: invert(97%) sepia(19%) saturate(4%) hue-rotate(92deg) brightness(103%) contrast(100%);
+        transform: rotate(0deg);
+    }
+    >span, >img{
+        transition: 1s;
+    }
+
+}

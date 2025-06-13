@@ -1,0 +1,96 @@
+@use 'config' as c;
+@use 'global';
+
+.art04{
+    width: 100%;
+    padding: c.$paddingMin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 4rem;
+    @media only screen and (min-width:c.$tablet){
+        width: 80%;
+        padding: 1.5rem 0;
+    }
+    >:nth-child(2){
+        background-color: #00ffff;
+        height: 3px;
+        width: 3rem;
+    }
+    >:nth-child(3){
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        row-gap: 1.5rem;
+        @media only screen and (min-width:c.$tablet){
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            column-gap: 0.5rem;
+        }
+        @media only screen and (min-width:c.$desktop){
+            flex-wrap: nowrap;
+        }
+        .ficha{
+            width: 100%;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            row-gap: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease;
+            border-radius: 12px;
+            &:hover{
+                background-color: #4f4f4f;
+                padding: 2.0rem 1rem 1rem 1rem;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            }
+            &:hover img{
+                transform: scale(1.2);
+                border-radius: 25%;
+                border: 3px solid #00ffff;
+            }
+            &:hover h4, &:hover p{
+                color: c.$color03;
+            }
+            @media only screen and (min-width:c.$tablet){
+                width: 46%;
+            }
+            @media only screen and (min-width:c.$desktop){
+                width: 22%;
+            }
+            img{
+                border-radius: 50%;
+                width: 100%;
+                max-width: 110px;
+                max-height: 110px;
+                object-fit: cover;
+                object-position: center;
+                transition: 1s;
+            }
+            >:nth-child(2){
+                text-align: center;
+                width: 60%;
+                transition: 1s linear 0s;
+                @media only screen and (min-width:c.$tablet){
+                    width: 100%;
+                }
+            }
+            span{
+                background-color: aqua;
+                height: 3px;
+                width: 3rem; 
+            }
+            h4{
+                transition: 1s linear 0s;
+                order:3;
+            }
+        }
+    }
+}

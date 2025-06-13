@@ -1,0 +1,143 @@
+@use 'config' as c;
+
+.sect01 {
+
+    width: 100%;
+    padding: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 2rem;
+    @media only screen and (min-width:c.$tablet){
+        padding: 4rem 0rem;
+        row-gap: 3rem;
+    }
+    @media only screen and (min-width:c.$desktop){
+        padding: 4rem 0rem;
+        row-gap: 4rem;
+    }
+    
+    article{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        row-gap: 1rem;
+        @media only screen and (min-width:c.$tablet){
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: space-between;
+        }
+        @media only screen and (min-width:c.$desktop){
+            width: 80%;
+        }
+        >:nth-child(1){
+            width: 100%;
+            padding: 0rem c.$paddingMin;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            row-gap: 2rem;
+            @media only screen and (min-width:c.$tablet){
+                &{
+                    width: 48%;
+                    row-gap: 2.5rem;
+                }
+            }
+            @media only screen and (min-width:c.$desktop){
+                &{
+                    padding: initial;
+                }
+            }
+            h3{
+                color: c.$color00;
+                font-size: clamp(1.2rem,5vw,4rem);
+                font-weight: 400;
+                font-family: c.$fuente02;
+            }
+            p{
+                color: c.$color00;
+            }
+            >span{
+                width: 90%;
+                height: 1.5px;
+                background-color: c.$color00;
+            }
+            .cards{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                row-gap: 1rem;
+                @media only screen and (min-width:c.$tablet){
+                    &{
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+                }
+                .card{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    row-gap: 1.5rem;
+                    @media only screen and (min-width:c.$tablet){
+                        &{
+                            width: 45%;
+                        }
+                        
+                    }
+                    >:nth-child(1){
+                        border-radius: 50%;
+                    }
+                    h4{
+
+                    }
+                    p{
+                        font-size: 0.9em;
+                    }
+                    
+
+                }
+
+            }
+            
+
+        }
+        >:nth-child(2){
+            width: 100%;
+            height: 40dvh;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+            
+            @media only screen and (min-width:c.$tablet){
+                &{
+                    width: 48%;
+                    height: initial;
+                }
+            }
+            >img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                &:hover{
+                    transform: scale(1.2);
+                }
+                transition: 2s;
+                
+            }
+
+        }
+        
+    }
+
+
+}
