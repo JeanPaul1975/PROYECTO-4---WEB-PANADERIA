@@ -4,3 +4,17 @@
 @use 'art01';
 @use 'art04';
 @use 'moduloBoton02';
+
+header{
+    background-image: url('../img/vistas/somos-panaderos/equipo-de-panaderos-1500.avif');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media only screen and (min-width:c.$tablet){
+        background-image: url('../img/vistas/somos-panaderos/equipo-de-panaderos-1800.avif');
+    }
+    @media only screen and (min-width:c.$desktop){
+        background-image: url('../img/vistas/somos-panaderos/equipo-de-panaderos-2560.avif');
+    }
+
+}

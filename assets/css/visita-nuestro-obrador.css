@@ -76,9 +76,10 @@ h4 {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: black;
   letter-spacing: 1px;
+  line-height: 1.8rem;
   font-family: "Montserrat";
 }
 
@@ -412,7 +413,9 @@ footer ul {
 }
 @media only screen and (min-width: 1200px) {
   .art_03 > :nth-child(3) img {
-    max-height: 450px;
+    max-height: 700px;
+    -o-object-position: top;
+       object-position: top;
   }
 }
 

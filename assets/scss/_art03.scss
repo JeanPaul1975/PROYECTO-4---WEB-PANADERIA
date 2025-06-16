@@ -48,7 +48,8 @@
                 max-height: 500px;
             }
             @media only screen and (min-width:c.$desktop){
-                max-height: 450px;
+                max-height: 700px;
+                object-position: top;
             }
         }
     }

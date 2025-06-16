@@ -27,7 +27,7 @@
         row-gap: 1.5rem;
         @media only screen and (min-width:c.$tablet){
             flex-direction: row;
-            align-items: flex-start;
+            align-items: stretch;
             justify-content: space-between;
             flex-wrap: wrap;
             column-gap: 0.5rem;
@@ -80,6 +80,16 @@
                 transition: 1s linear 0s;
                 @media only screen and (min-width:c.$tablet){
                     width: 100%;
+                    padding-top: 1rem;
+                    min-height: 210px;
+                }
+                @media only screen and (min-width:c.$desktop){
+                    padding-top: 2rem;
+                    min-height: 320px;
+                }
+                @media only screen and (min-width: 1550px){
+                    padding-top: 2.5rem;
+                    min-height: 290px;
                 }
             }
             span{
