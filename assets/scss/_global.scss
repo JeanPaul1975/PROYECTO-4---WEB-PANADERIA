@@ -75,7 +75,7 @@ header{
     >:nth-child(2){
         width: 500px;
         height: 300px;
-        border: 2px solid c.$color00;
+        
         overflow: hidden;
         &:hover img {
             transform: scale(1.2);
@@ -88,7 +88,8 @@ header{
         img{
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            filter: invert(97%) sepia(85%) saturate(0%) hue-rotate(168deg) brightness(102%) contrast(103%);
             transition: 1s;
         }
     

@@ -8,9 +8,16 @@
 @use 'moduloBoton01';
 
 header{
-    background-image: url('../img/vistas/home/panaderia-pasteleria-aginaga-1500.avif');
+    background-image: url('../img/vistas/home/panaderia-donostia_1500.avif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    @media only screen and (min-width:c.$tablet){
+        background-image: url('../img/vistas/home/panaderia-donostia_1800.avif');
+    }
+    @media only screen and (min-width:c.$desktop){
+        background-image: url('../img/vistas/home/panaderia-donostia_2560.avif');
+    }
 }
+
 

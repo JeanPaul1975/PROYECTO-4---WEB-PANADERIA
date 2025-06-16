@@ -42,12 +42,13 @@
             width: 100%;
             object-fit: cover;
             object-position: center;
+            max-height: 400px;
             transition: 1s;
             @media only screen and (min-width:c.$tablet){
                 max-height: 500px;
             }
             @media only screen and (min-width:c.$desktop){
-                max-height: 400px;
+                max-height: 450px;
             }
         }
     }
