@@ -4,3 +4,16 @@
 @use 'sect01'; 
 @use 'moduloBoton01';
 @use 'moduloBoton02';
+
+header{
+    background-image: url(../img/vistas/productos/panes-y-pasteles-1500.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @media only screen and (min-width:c.$tablet){
+        background-image: url(../img/vistas/productos/panes-y-pasteles-1800.avif);
+    }
+    @media only screen and (min-width:c.$desktop){
+        background-image: url(../img/vistas/productos/panes-y-pasteles-2560.avif);
+    }
+}
