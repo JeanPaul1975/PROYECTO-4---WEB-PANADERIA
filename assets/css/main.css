@@ -744,4 +744,7 @@ header {
   header {
     background-image: url("../img/vistas/home/panaderia-donostia_2560.avif");
   }
+}
+header h1 {
+  color: red;
 }/*# sourceMappingURL=main.css.map */

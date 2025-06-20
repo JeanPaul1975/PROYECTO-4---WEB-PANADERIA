@@ -18,6 +18,9 @@ header{
     @media only screen and (min-width:c.$desktop){
         background-image: url('../img/vistas/home/panaderia-donostia_2560.avif');
     }
+    h1{
+        color:c.$color04;
+    }
 }
 
 
